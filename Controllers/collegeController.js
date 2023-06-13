@@ -14,11 +14,11 @@ const createCollege = async (req, res) => {
         .send({ status: false, msg: "Please Provide Some Data" });
     }
 
-    if (!validator.isValidName(name) || name.trim().length == 0) {
-      return res
-        .status(404)
-        .send({ status: false, msg: "Please Provide Valid Name" });
-    }
+    // if (!validator.isValidName(name) || name.trim().length == 0) {
+    //   return res
+    //     .status(404)
+    //     .send({ status: false, msg: "Please Provide Valid Name" });
+    // }
 
     // if (!validator.isValidFullName(fullName) || fullName.trim().length == 0) {
     //   return res

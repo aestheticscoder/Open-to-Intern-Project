@@ -20,7 +20,7 @@ const createIntern = async (req, res) => {
 
     if (!validator.isValidMobileNo(mobile)) {
       return res
-        .status(404)
+        .status(400)
         .send({ status: false, msg: "Please Provide a Valid Mobile Number" });
     }
 
