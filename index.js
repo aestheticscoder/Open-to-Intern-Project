@@ -11,7 +11,7 @@ app.use(express.json());
 
 
 
-const url = "mongodb+srv://believe0256:tQbGNEiflhDEgSvP@open-to-intern-db.8buezqz.mongodb.net/Open_To_Intern?retryWrites=true&w=majority";
+const url = "mongodb+srv://believe0256:tQbGNEiflhDEgSvP@open-to-intern-db.8buezqz.mongodb.net/Open_To_Intern";
 
 
 mongoose.connect(url, {
