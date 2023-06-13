@@ -12,11 +12,11 @@ const createIntern = async (req, res) => {
         .status(400)
         .send({ status: false, msg: "Please Provide Some Data" });
     }
-    // if (!validator.isValidName(name)) {
-    //   return res
-    //     .status(400)
-    //     .send({ status: false, msg: "Please Provide a Name" });
-    // }
+    if (!validator.isValidName(name)) {
+      return res
+        .status(400)
+        .send({ status: false, msg: "Please Provide a Name" });
+    }
 
     if (!validator.isValidMobileNo(mobile)) {
       return res
