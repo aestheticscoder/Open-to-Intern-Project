@@ -87,7 +87,7 @@ const collegeDetails = async (req, res) => {
       .select({ name: 1, email: 1, mobile: 1 });
 
     if (!candidates) {
-      return res.status(400).send({
+      return res.status(404).send({
         status: false,
         msg: "No Students from the mentioned College had applied yet",
       });
