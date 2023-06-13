@@ -28,14 +28,14 @@ const createCollege = async (req, res) => {
 
     if (!logoLink) {
       return res
-        .status(404)
+        .status(400)
         .send({ status: false, msg: "Please Provide a LogoLink" });
     }
     const validateLogoLink = url.isUri(logoLink);
 
     if (!validator.isValidlogoLink(logoLink)) {
       return res
-        .status(404)
+        .status(400)
         .send({ status: false, msg: "Please Provide a Valid logoLink" });
     }
 

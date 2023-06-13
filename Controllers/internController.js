@@ -34,7 +34,7 @@ const createIntern = async (req, res) => {
 
     if (!validator.isValidEmail(email)) {
       return res
-        .status(404)
+        .status(400)
         .send({ status: false, msg: "Please Provide a Valid Email Id" });
     }
 
@@ -48,7 +48,7 @@ const createIntern = async (req, res) => {
 
     if (!validator.isValid(collegeName)) {
       return res
-        .status(404)
+        .status(400)
         .send({ status: false, msg: "Please Provide a College Name" });
     }
     const findcollege = await collegeModel.findOne({ name: collegeName }); 
